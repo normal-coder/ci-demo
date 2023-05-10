@@ -1,0 +1,112 @@
+name: 模版名
+description: '反馈问题、缺陷'
+labels: bug
+assignees: weihongbin1, 测试Issue模版审查者
+title: [Bug]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        <script>alert(1)</script>
+        # 这里是 Markdown 表单
+        - 选项 1
+        - 选项 2 
+        - 普通文本
+        <div><div>
+
+        ```js
+
+          console.log
+
+        ```
+        <p align="center" style="background: cornflowerblue;border-radius: 10px;padding: 10px;"><a href="https://nextjs.org"><picture><source media="(prefers-color-scheme: dark)"srcset="https://assets.vercel.com/image/upload/v1662130559/nextjs/Icon_dark_background.png"><img src="https://gitee.com/_next/static/media/logo-white.a5b0e29c.svg"height="128"></picture><h1 align="center">Next.js</h1></a></p>
+  - type: checkboxes
+    attributes:
+      label: 11
+      description: 'Please run `npm install next@canary` to try the canary version of Next.js that ships daily. It includes all features and fixes that have not been released to the stable version yet. Some issues may already be fixed in the canary version, so please verify that your issue reproduces before opening a new issue.'
+      options:
+        - label: 11
+        - label: 必须选择
+          required: true  
+  - type: textarea
+    attributes:
+      label: Provide environment information
+      description: Please run `next info` in the root directory of your project and paste the results. You might need to use `npx --no-install next info` if next is not in the current PATH.
+      render: bash
+    validations:
+      required: true
+  - type: dropdown
+    attributes:
+      label: Which area(s) of Next.js are affected? (leave empty if unsure)
+      multiple: true
+      options:
+        - 'App directory (appDir: true)'
+        - 'CLI (create-next-app)'
+        - 'Data fetching (gS(S)P, getInitialProps)'
+        - 'Dynamic imports (next/dynamic)'
+        - 'ESLint (eslint-config-next)'
+        - 'Font optimization (@next/font)'
+        - 'Image optimization (next/image, next/legacy/image)'
+        - 'Internationalization (i18n)'
+        - 'Jest (next/jest)'
+        - 'MDX (@next/mdx)'
+        - 'Metadata (metadata, generateMetadata, next/head, head.js)'
+        - 'Middleware / Edge (API routes, runtime)'
+        - 'Package manager (npm, pnpm, Yarn)'
+        - 'Routing (next/router, next/navigation, next/link)'
+        - 'Script optimization (next/script)'
+        - 'Standalone mode (output: "standalone")'
+        - 'Static HTML Export (next export)'
+        - 'SWC minifier (swcMinify: true)'
+        - 'SWC transpilation'
+        - 'Turbopack (--turbo)'
+        - 'TypeScript'
+    validations:
+      required: false        
+  - type: input
+    id: iidd
+    attributes:
+      label: Link to the code that reproduces this issue
+      description: |
+        A link to a GitHub repository, a [CodeSandbox](https://codesandbox.io/p/sandbox/github/vercel/next.js/tree/canary/examples/reproduction-template) or a [StackBlitz](https://stackblitz.com/fork/github/vercel/next.js/tree/canary/examples/reproduction-template) minimal reproduction. Minimal reproductions should be created from our [bug report template with `npx create-next-app -e reproduction-template`](https://github.com/vercel/next.js/tree/canary/examples/reproduction-template) and should include only changes that contribute to the issue.
+        To report an App Router related issue, you can use these templates: [CodeSandbox](https://codesandbox.io/p/sandbox/github/vercel/next.js/tree/canary/examples/reproduction-template-app-dir), [StackBlitz](https://stackblitz.com/fork/github/vercel/next.js/tree/canary/examples/reproduction-template-app-dir) or [`npx create-next-app -e reproduction-template-app-dir`](https://github.com/vercel/next.js/tree/canary/examples/reproduction-template-app-dir)
+    validations:
+      required: true
+  - type: textarea
+    attributes:
+      label: To Reproduce
+      description: Steps to reproduce the behavior, please provide a clear description of how to reproduce the issue, based on the linked minimal reproduction. Screenshots can be provided in the issue body below. If using code blocks, make sure that [syntax highlighting is correct](https://docs.github.com/en/get-started/writing-on-github/working-with-advanced-formatting/creating-and-highlighting-code-blocks#syntax-highlighting) and double check that the rendered preview is not broken.
+    validations:
+      required: true
+  - type: textarea
+    attributes:
+      label: Describe the Bug
+      description: A clear and concise description of what the bug is.
+    validations:
+      required: true
+  - type: textarea
+    attributes:
+      label: Expected Behavior
+      description: A clear and concise description of what you expected to happen.
+    validations:
+      required: true
+  - type: markdown
+    attributes:
+      value: "`console.log(v)`"
+  - type: markdown
+    attributes:
+      value: '<div style="color: green">自定义 div。请注意此段绿色文字。</div>'
+  - type: markdown
+    attributes:
+      value: These steps are used to add integration tests to ensure the same issue does not happen again. Thanks in advance!
+  - type: input
+    attributes:
+      label: 11
+      description: 'Please specify the exact version. For example: Chrome 100.0.4878.0'
+  - type: input
+    attributes:
+      label: 1
+      description: 'For example: next start, next export, Vercel, Other platform'
+  - type: markdown
+    attributes:
+      value: "<img src='1' onerror='alert(1)'>"
