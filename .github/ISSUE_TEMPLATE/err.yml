@@ -1,0 +1,41 @@
+name: book
+description: '这是描述'
+labels: bug, 测试Issue模版标签yaml
+assignees: weihongbin1, 测试Issue模版审查者
+title: 默认标题
+body:
+  - type: input2
+    attributes:
+      label: '书籍名称'
+      description: '填写书籍的完整标题 - desc'
+      placeholder: '请输入书籍的名称'
+    validations: 
+        required: true
+  - type: dropdown
+    attributes:
+      label: '出版社'
+      description: 请选择出版社'
+      options:
+        - 中华书局
+        - 上海古籍出版社
+        - 岳麓书院
+    validations:
+      required: true
+  - type: checkboxes
+    attributes:
+      label: 书籍类型
+      description: 请勾选书籍类型
+      options:
+        - label: 哲学
+          required: true
+        - label: 历史
+        - label: 政治  
+        - label: 自然科学              
+    validations:
+      required: true
+  - type: textarea
+    attributes:
+      label: 推荐理由
+      description: 详细描写你的推荐理由
+      placeholder: 请填写理由
+      value: 默认理由 
