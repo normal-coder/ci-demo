@@ -1,4 +1,4 @@
-name: 文档信息更正、勘误
+name: 文档勘误、纠错改进
 description: 当文档内容存在过期、信息不正确，需要修改更正的选这个
 title: "[文档勘误]: "
 labels: ["enhancement"]
