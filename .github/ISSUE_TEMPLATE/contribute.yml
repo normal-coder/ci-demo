@@ -60,6 +60,7 @@ body:
   - type: checkboxes
     id: promise
     attributes:
+      label: 投稿前自查
       options:
         - label: 我已重复默念所投稿内容，确认内容通畅严谨，无标点符号问题、无明显语病
           required: true
