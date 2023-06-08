@@ -12,6 +12,8 @@ body:
       options:
         - 否，这是全新的文档
         - 是，在旧版帮助中心上存在，我确认内容未被搬运，我会提供旧的文档地址
+    validations:
+     required: true
   - type: dropdown
     id: relatedProduct
     attributes:
