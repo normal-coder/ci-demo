@@ -1,0 +1,103 @@
+name: 文档投稿
+description: 当有新的内容，可选此类型进行投稿
+title: "[文档投稿]: "
+labels: ["feature"]
+assignees:
+  - normalcoder
+body:
+  - type: dropdown
+    id: isOldDocument
+    attributes:
+      label: 是否为历史文章搬运（老帮助中心）
+      options:
+        - 否，这是全新的文档
+        - 是，在旧版帮助中心上存在，我确认内容未被搬运，我会提供旧的文档地址
+  - type: dropdown
+    id: relatedProduct
+    attributes:
+      label: 关联业务线
+      description: 请根据投稿文档内容选择相关业务线
+      options:
+        - 开源社区相关
+        - 企业版相关
+        - Gitee Go 相关
+        - 其他
+    validations:
+     required: true
+  - type: input
+    id: oldDocumentUrl
+    attributes:
+     label: 旧版帮助文档地址
+     description: 旧版文档地址形如 `https://gitee.com/help/articles/****`
+    validations:
+     required: false
+  - type: input
+    id: title
+    attributes:
+     label: 投稿文档标题
+    validations:
+     required: true
+  - type: input
+    id: slug
+    attributes:
+     label: 期望文档相对地址(Slug)
+     description: 内容上线后，文档地址是 `https://help.gitee.com/xxxx/.../xxxxx`，其中 `/xxxx/.../xxxxx` 就是文档相对地址
+    validations:
+     required: false
+  - type: textarea
+    id: sidebar
+    attributes:
+     label: 期望文档出现的位置
+     description: 请具体描述希望出现在哪个栏目哪个(一级/二级)分类下，如：`社区版-Issue任务协作`
+    validations:
+     required: true
+  - type: 
+    id: promise
+    attributes:
+      options:
+        - label: 我已重复默念所投稿内容，确认内容通畅严谨，无标点符号问题、无明显语病
+          required: true
+        - label: 我确认内容在已有帮助中心中无重复、相似内容（不是重复搬运）
+          required: true
+  - type: input
+    id: slug
+    attributes:
+     label: 期望文档相对地址(Slug)
+     description: 内容上线后，文档地址是 `https://help.gitee.com/xxxx/.../xxxxx`，其中 `/xxxx/.../xxxxx` 就是文档相对地址
+    validations:
+     required: false
+
+  
+  
+  
+  "请输入帮助文档地址，以 https://help.gitee.com/ 开头"
+  - type: textarea
+    id: description
+    attributes:
+      label: 具体问题描述
+      description: 请详细说明文档存在的问题，必要情况建议给出截图
+    validations:
+      required: true
+
+  - type: textarea
+    id: expected
+    attributes:
+      label: 期望效果
+      description: 理想的效果或者是预期应该是怎样的
+    validations:
+      required: true
+  - type: textarea
+    attributes:
+      label: 投稿内容
+      description: 请在这里贴出投稿正文，如涉及图片引用，可以保持外链图片（采纳后 Maintainer 会同步保存到仓库）
+    validations:
+      required: true
+      
+  - type: checkboxes
+    id: promise
+    attributes:
+      options:
+        - label: 我已重复默念所投稿内容，确认内容通畅严谨，无标点符号问题、无明显语病
+          required: true
+        - label: 我确认内容在已有帮助中心中无重复、相似内容（不是重复搬运）
+          required: true
