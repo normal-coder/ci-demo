@@ -57,7 +57,7 @@ body:
       description: 请在这里贴出投稿正文，如涉及图片引用，可以保持外链图片（采纳后 Maintainer 会同步保存到仓库）
     validations:
       required: true
-  - type: checkbox
+  - type: checkboxes
     id: promise
     attributes:
       options:
