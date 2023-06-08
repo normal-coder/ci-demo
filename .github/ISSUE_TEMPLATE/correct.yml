@@ -1,0 +1,52 @@
+name: 文档信息更正、勘误
+description: 当文档内容存在过期、信息不正确，需要修改更正的选这个
+title: "[Bug]: "
+labels: ["enhancement"]
+assignees:
+  - normalcoder
+body:
+  - type: checkboxes
+    attributes:
+      label: 这个问题是否已经存在？
+      options:
+        - label: 我已经搜索过 [现有的问题](../issues)，无重复问题出现
+          required: true
+  - type: dropdown
+    id: relatedProduct
+    attributes:
+      label: 关联业务线
+      description: 请根据文档内容选择相关业务线
+      options:
+        - 开源社区相关
+        - 企业版相关
+        - Gitee Go 相关
+        - 其他
+  - type: input
+    id: documentUrl
+    attributes:
+     label: 有问题的文档地址
+     placeholder: "请输入帮助文档地址，以 https://help.gitee.com/ 开头"
+    validations:
+     required: true
+  
+  - type: textarea
+    id: description
+    attributes:
+      label: 具体问题描述
+      description: 请详细说明文档存在的问题，必要情况建议给出截图
+    validations:
+      required: true
+
+  - type: textarea
+    id: expected
+    attributes:
+      label: 期望效果
+      description: 理想的效果或者是预期应该是怎样的
+    validations:
+      required: true
+  - type: textarea
+    attributes:
+      label: 修正后的文本内容
+      description: 如有更正或期望的内容，请在此处贴出。（可贴出修正后的内容以要求直接更换）
+    validations:
+      required: true
